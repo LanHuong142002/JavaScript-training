@@ -40,7 +40,6 @@ const fetchAPI = {
         },
       };
       const noteItem = await fetch(`${this.baseURL}${url}`, options);
-
       return noteItem.json();
     } catch (e) {
       const error = e;

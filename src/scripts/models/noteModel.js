@@ -1,5 +1,6 @@
 import fetchAPI from '../utils/fetchAPI';
 import URL_API from '../constants/apiUrl';
+import { saveDataToJSON } from '../utils/system';
 
 /**
  * @class listNoteModel
@@ -28,6 +29,7 @@ export default class NoteModel {
 
       const noteItem = await fetchAPI.postNote(patternNote, URL_API.NOTES_URL);
       this.listNotes.push(noteItem);
+      saveDataToJSON(noteItem);
 
       return noteItem;
     } catch (error) {
