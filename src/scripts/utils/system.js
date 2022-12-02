@@ -1,4 +1,4 @@
-import fs from 'fs';
+const fs = require('fs');
 
 export const saveDataToJSON = (newData) => {
   fs.writeFileSync('data/db.json', JSON.stringify(newData));
