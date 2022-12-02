@@ -9,8 +9,8 @@
     "parcel": "^2.7.0"
   },
   "scripts": {
-    "dev": "concurrently \"npm start\" \"npm run start-db\"",
-    "starts": "parcel ./src/pages/index.html ./src/pages/home.html",
+    "dev": "concurrently \"npm project\" \"npm run start-db\"",
+    "project": "parcel ./src/pages/index.html ./src/pages/home.html",
     "build": "parcel build",
     "start-db": "json-server --watch data/db.json",
     "lint:eslint": "eslint --ignore-path .gitignore . --ext .js,.jsx,.ts,.tsx",
