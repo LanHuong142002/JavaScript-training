@@ -1,6 +1,7 @@
 {
   "name": "my-project",
   "devDependencies": {
+    "buffer": "^6.0.3",
     "concurrently": "^7.5.0",
     "eslint": "^8.23.1",
     "eslint-config-airbnb": "^19.0.4",
@@ -15,5 +16,8 @@
     "start-db": "json-server --watch data/db.json --port 3005",
     "lint:eslint": "eslint --ignore-path .gitignore . --ext .js,.jsx,.ts,.tsx",
     "fix:eslint": "eslint --fix --ignore-path .gitignore . --ext .js,.jsx,.ts,.tsx"
+  },
+  "dependencies": {
+    "@types/node": "^18.11.10"
   }
 }
