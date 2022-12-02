@@ -1,0 +1,19 @@
+{
+  "name": "my-project",
+  "devDependencies": {
+    "concurrently": "^7.5.0",
+    "eslint": "^8.23.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "parcel": "^2.7.0"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm start\" \"npm run start-db\"",
+    "start": "parcel ./src/pages/index.html ./src/pages/home.html",
+    "build": "parcel build",
+    "start-db": "json-server --watch data/db.json",
+    "lint:eslint": "eslint --ignore-path .gitignore . --ext .js,.jsx,.ts,.tsx",
+    "fix:eslint": "eslint --fix --ignore-path .gitignore . --ext .js,.jsx,.ts,.tsx"
+  }
+}
