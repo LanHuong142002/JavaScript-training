@@ -13,7 +13,7 @@
     "dev": "concurrently \"npm start\" \"npm run start-db\"",
     "start": "parcel ./src/pages/index.html ./src/pages/home.html",
     "start-product": "parcel start dist/home.html",
-    "build": "parcel build --dist-dir public",
+    "build": "parcel build ./src/pages/index.html ./src/pages/home.html",
     "start-db": "json-server --watch data/db.json --port 3005",
     "lint:eslint": "eslint --ignore-path .gitignore . --ext .js,.jsx,.ts,.tsx",
     "fix:eslint": "eslint --fix --ignore-path .gitignore . --ext .js,.jsx,.ts,.tsx"
