@@ -29,7 +29,8 @@ export default class NoteModel {
 
       const noteItem = await fetchAPI.postNote(patternNote, URL_API.NOTES_URL);
       this.listNotes.push(noteItem);
-      saveDataToJSON(noteItem);
+      const listItem = this.listNotes.push(noteItem);
+      saveDataToJSON(listItem);
 
       return noteItem;
     } catch (error) {
