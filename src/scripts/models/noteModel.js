@@ -26,11 +26,12 @@ export default class NoteModel {
         description: note.description,
         deletedAt: '',
       };
+      const listItems = this.listNotes.push(patternNote);
 
+      saveDataToJSON(listItems);
       const noteItem = await fetchAPI.postNote(patternNote, URL_API.NOTES_URL);
       this.listNotes.push(noteItem);
-      const listItem = this.listNotes.push(noteItem);
-      saveDataToJSON(listItem);
+      // const listItem = this.listNotes.push(noteItem);
 
       return noteItem;
     } catch (error) {
